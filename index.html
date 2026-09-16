@@ -80,32 +80,34 @@ img{max-width:100%}
 .step--urg{border-color:#BFE4C9;background:var(--green-soft)}
 .step--urg .step__no{background:var(--green)}
 
-/* comparativa de escenarios */
-.cmp{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.cmp table{width:100%;border-collapse:collapse}
-.cmp thead th{text-align:left;vertical-align:bottom;padding:26px 22px 22px;border-bottom:1px solid var(--line)}
-.cmp__feat{width:46%}
-.cmp__col{width:27%;border-left:1px solid var(--line)}
-.cmp__col--hl{background:#F7FAFD;border-left-color:#B9D6EE;box-shadow:inset 0 3px 0 var(--blue)}
-.cmp__k{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
-.cmp__col--hl .cmp__k{color:var(--blue)}
-.cmp__k i{font-style:normal;font-size:9px;font-weight:800;letter-spacing:.1em;color:#fff;background:var(--blue);border-radius:20px;padding:3px 8px;margin-left:7px}
-.cmp__t{display:block;font-family:var(--serif);font-size:17px;font-weight:460;line-height:1.18;margin-bottom:16px;min-height:2.4em}
-.cmp__v{display:block;font-family:var(--serif);font-size:clamp(24px,3vw,32px);font-weight:500;line-height:1;white-space:nowrap}
-.cmp__u{display:block;font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--label);margin-top:8px}
-.cmp__iva{display:block;font-size:11.5px;color:var(--label);margin-top:11px;line-height:1.55}
-.cmp__iva b{display:block;margin-top:3px;white-space:nowrap}
-.cmp__iva b{color:var(--ink);font-weight:800}
-.cmp tbody td{padding:13px 22px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.45}
-.cmp tbody tr:last-child td{border-bottom:0}
-.cmp td.f{color:var(--ink);font-weight:600}
-.cmp td.c{text-align:center;border-left:1px solid var(--line);width:27%}
-.cmp td.hl{background:#F7FAFD;border-left-color:#B9D6EE}
-.ok{color:var(--green);font-size:16px;font-weight:700;line-height:1}
-.hl .ok{color:var(--blue)}
-.no{color:#C4CBD5;font-size:15px}
-.txt{font-size:12.5px;color:var(--ink);font-weight:600;line-height:1.4;display:inline-block}
-.txt b{font-weight:800}
+/* escenarios lado a lado */
+.escs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.esc{display:flex;flex-direction:column}
+.esc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 30px 32px;position:relative;overflow:hidden}
+.esc--hl{border-color:#B9D6EE;box-shadow:0 20px 50px -28px rgba(24,39,65,.4)}
+.esc--hl::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--green-br),var(--blue-br))}
+.esc__k{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.esc__pill{font-size:9.5px;font-weight:800;letter-spacing:.11em;color:#fff;background:var(--blue);border-radius:20px;padding:4px 10px}
+.esc__t{font-family:var(--serif);font-size:clamp(21px,2.5vw,26px);font-weight:440;margin:0 0 10px;line-height:1.14}
+.esc__tag{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 22px;min-height:3.2em}
+.esc__price{padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.esc__v{font-family:var(--serif);font-size:clamp(30px,4vw,40px);font-weight:500;line-height:1;white-space:nowrap}
+.esc__k2{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--label);margin:0}
+.esc__t2{font-size:12.5px;color:var(--label);margin:12px 0 0;line-height:1.5}
+.esc__t2 b{color:var(--ink);font-weight:800}
+.esc__lead{font-size:12.5px;font-weight:700;color:var(--ink);margin:22px 0 4px}
+.grp{margin-top:18px}
+.grp__k{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.esc--hl .grp__k{color:var(--blue)}
+.grp__l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.grp__l li{position:relative;padding-left:18px;font-size:12.5px;color:var(--muted);line-height:1.55}
+.grp__l li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;background:var(--green);border-radius:2px}
+.esc--hl .grp__l li::before{background:var(--blue)}
+.grp__l li b{color:var(--ink);font-weight:700}
+
+.grp__l li.plus{color:var(--ink)}
+.grp__l li.plus::before{background:var(--blue);border-radius:50%}
+.plus__t{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--blue);border-radius:20px;padding:2px 8px;margin-right:8px;vertical-align:1.5px}
 
 .band{display:flex;align-items:flex-start;gap:28px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:14px;padding:28px 32px;margin-top:22px}
 .band__tag{flex:none;font-family:var(--serif);font-size:clamp(22px,2.8vw,29px);font-weight:460;line-height:1.06;max-width:9ch}
@@ -141,9 +143,8 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 
 @media (max-width:980px){
   .steps{grid-template-columns:repeat(2,1fr)}
-  .cmp__t{font-size:15px;min-height:0}
-  .cmp thead th{padding:20px 14px 16px}
-  .cmp tbody td{padding:11px 14px;font-size:12px}
+  .escs{grid-template-columns:1fr}
+  .esc__tag{min-height:0}
 }
 @media (max-width:760px){
   .wrap,.hero__inner,.closing__inner{padding-left:22px;padding-right:22px}
@@ -151,16 +152,7 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   .grid,.steps,.terms{grid-template-columns:1fr}
   .band{flex-direction:column;gap:14px}
   .facts{gap:16px 26px}
-  .cmp{border:0;border-radius:0;background:none}
-  .cmp table,.cmp thead,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto}
-  .cmp__feat{display:none!important}
-  .cmp__col{border-left:0;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:20px!important}
-  .cmp tbody tr{border:1px solid var(--line);border-radius:12px;background:var(--card);margin-bottom:8px;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
-  .cmp tbody td{border:0!important;padding:0;background:none!important}
-  .cmp td.f{flex:1 1 100%;font-size:12.5px}
-  .cmp td.c{width:auto;text-align:left}
-  .cmp td.c::before{content:'A';font-size:9px;font-weight:800;letter-spacing:.1em;color:var(--label);margin-right:6px}
-  .cmp td.hl::before{content:'B'}
+  .esc{padding:24px 22px 26px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -186,7 +178,7 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   .block{padding:22px 0}
   .grid{grid-template-columns:repeat(3,1fr)!important}
   .steps{grid-template-columns:repeat(5,1fr)!important}
-  .cmp{break-inside:avoid}
+  .escs{grid-template-columns:1fr 1fr!important}
   .terms{grid-template-columns:repeat(2,1fr)!important}
   .sectitle{font-size:22px}
   .secsub{font-size:11px;margin-bottom:16px;max-width:none}
@@ -196,16 +188,17 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
   .step__no{width:23px;height:23px;font-size:11px;margin-bottom:9px}
   .step__t{font-size:14px}
   .step__d{font-size:10px;margin-bottom:9px}
-  .cmp thead th{padding:16px 14px 14px}
-  .cmp__t{font-size:14px;min-height:0;margin-bottom:11px}
-  .cmp__v{font-size:22px}
-  .cmp tbody td{padding:8px 14px;font-size:10.5px}
-  .term__d,.band__txt{font-size:10px;line-height:1.45}
+  .esc{padding:18px 18px 20px}
+  .esc__t{font-size:18px}
+  .esc__tag{font-size:10.5px;margin-bottom:14px;min-height:0}
+  .esc__price{padding:13px 0}
+  .esc__v{font-size:26px}
+  .grp__l li,.term__d,.band__txt{font-size:10px;line-height:1.45}
   .band{padding:16px 18px;gap:18px;margin-top:16px}
   .term{padding:11px 0}
   .closing{padding:40px 0;break-before:page}
   .closing__logo{margin-top:28px}
-  .step,.band,.term,.grid,.cmp tbody tr{break-inside:avoid}
+  .step,.esc,.band,.term,.grid{break-inside:avoid}
   #escenarios{break-before:page}
 }
 </style>
@@ -302,41 +295,93 @@ a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
     <p class="seclabel reveal">La decisión</p>
     <h2 class="sectitle reveal">Los dos son con IA. La diferencia es la voz.</h2>
     <p class="secsub reveal">Tal como lo pidieron, la canción se produce con inteligencia artificial dirigida por nuestro equipo musical en los dos escenarios, y los dos entregan la misma canción con su base rítmica anticipada, el instrumental, los loops y la cortina. Lo único que cambia es si la voz queda generada o si la grabamos en estudio sobre la pista.</p>
-    <div class="cmp reveal">
-      <table>
-        <thead><tr>
-        <th class="cmp__feat"></th>
-        <th class="cmp__col">
-          <span class="cmp__k">Escenario A</span>
-          <span class="cmp__t">Todo con IA dirigida</span>
-          <span class="cmp__v num">$&thinsp;9.850.000</span>
-          <span class="cmp__u">Antes de IVA</span>
-          <span class="cmp__iva num">IVA 19% $&thinsp;1.871.500<b>Total $&thinsp;11.721.500 COP</b></span>
-        </th>
-        <th class="cmp__col cmp__col--hl">
-          <span class="cmp__k">Escenario B <i>Recomendado</i></span>
-          <span class="cmp__t">IA dirigida, con capa de voz grabada</span>
-          <span class="cmp__v num">$&thinsp;13.850.000</span>
-          <span class="cmp__u">Antes de IVA</span>
-          <span class="cmp__iva num">IVA 19% $&thinsp;2.631.500<b>Total $&thinsp;16.481.500 COP</b></span>
-        </th>
-        </tr></thead>
-        <tbody>
-        <tr><td class="f">Rutas creativas a elegir, con referencia sonora y bosquejo de coro</td><td class="c"><span class="txt">1</span></td><td class="c hl"><span class="txt">2</span></td></tr>
-        <tr><td class="f">Letra original en neutro andino, con una estrofa para cada marca</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Composición y producción del tema con IA dirigida</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">La voz del jingle</td><td class="c"><span class="txt">Generada</span></td><td class="c hl"><span class="txt">Generada <b>y grabada en estudio</b></span></td></tr>
-        <tr><td class="f">Arreglos, mezcla y masterización</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Base rítmica e intro, entregados por anticipado</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Jingle cantado de 3:00, versión instrumental y loops</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Intro suelto como cortina de eventos y transmisiones</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Corte de 60 segundos para redes</td><td class="c"><span class="no" aria-label="no incluido">&ndash;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Guiño de cierre para Natura y otro para Avon</td><td class="c"><span class="no" aria-label="no incluido">&ndash;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Rondas de cambios sobre la canción</td><td class="c"><span class="txt">2</span></td><td class="c hl"><span class="txt">3</span></td></tr>
-        <tr><td class="f">Licencia de uso interno y certificado de origen</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        <tr><td class="f">Producción en tres semanas, sin recargo por el plazo</td><td class="c"><span class="ok" aria-label="incluido">&#10003;</span></td><td class="c hl"><span class="ok" aria-label="incluido">&#10003;</span></td></tr>
-        </tbody>
-      </table>
+    <div class="escs">
+
+      <article class="esc reveal">
+        <p class="esc__k">Escenario A </p>
+        <h3 class="esc__t">Todo con IA dirigida</h3>
+        <p class="esc__tag">La canción completa, producida y terminada con IA bajo la dirección de nuestro músico productor.</p>
+        <div class="esc__price">
+          <span class="esc__v num">$&thinsp;9.850.000</span>
+          <span class="esc__k2">más IVA</span>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Concepto y letra</p>
+          <ul class="grp__l">
+            <li>Una ruta creativa, con su referencia sonora y un bosquejo de coro para escucharla antes de aprobarla</li>
+            <li>Letra original en lenguaje neutro andino, con una estrofa para Natura y otra para Avon</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Producción con IA dirigida</p>
+          <ul class="grp__l">
+            <li>Composición, generación y dirección del tema con IA, a cargo de nuestro músico productor</li>
+            <li>Voz principal y coros generados, dirigidos take por take hasta la interpretación acordada</li>
+            <li>Arreglos, mezcla y masterización de la versión cantada de 3:00</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Lo que reciben</p>
+          <ul class="grp__l">
+            <li><b>Base rítmica e intro</b>, entregados por anticipado para grabar el videoclip</li>
+            <li>Jingle cantado de 3:00, versión instrumental y loops</li>
+            <li>Intro suelto como cortina de eventos y transmisiones</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Y además</p>
+          <ul class="grp__l">
+            <li>Dos rondas de cambios sobre la canción</li>
+            <li>Licencia de uso interno para los tres países y certificado de origen</li>
+            <li><b>El calendario de la temporada ya está contemplado</b>: producimos en tres semanas y adelantamos la base rítmica, sin recargo por el plazo</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="esc esc--hl reveal">
+        <p class="esc__k">Escenario B <span class="esc__pill">Recomendado</span></p>
+        <h3 class="esc__t">IA dirigida, con capa de voz grabada</h3>
+        <p class="esc__tag">La misma producción con IA, más una voz humana grabada sobre la pista. Es el escenario con menos riesgo.</p>
+        <div class="esc__price">
+          <span class="esc__v num">$&thinsp;13.850.000</span>
+          <span class="esc__k2">más IVA</span>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Concepto y letra</p>
+          <ul class="grp__l">
+            <li class="plus"><span class="plus__t">Suma</span><b>Dos rutas creativas a elegir</b>, cada una con su referencia sonora y su bosquejo de coro</li>
+            <li>Letra original en lenguaje neutro andino, con una estrofa para Natura y otra para Avon</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Producción con IA dirigida</p>
+          <ul class="grp__l">
+            <li>Composición, generación y dirección del tema con IA, a cargo de nuestro músico productor</li>
+            <li>Voz principal y coros generados, dirigidos take por take hasta la interpretación acordada</li>
+            <li class="plus"><span class="plus__t">Suma</span><b>Voz principal y coros grabados en estudio</b> sobre la pista, para no depender de que la entonación generada llegue al punto</li>
+            <li class="plus"><span class="plus__t">Suma</span><b>Dirección vocal</b> de nuestro músico productor en la sesión de grabación</li>
+            <li>Arreglos, mezcla y masterización de la versión cantada de 3:00</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Lo que reciben</p>
+          <ul class="grp__l">
+            <li><b>Base rítmica e intro</b>, entregados por anticipado para grabar el videoclip</li>
+            <li>Jingle cantado de 3:00, versión instrumental y loops</li>
+            <li>Intro suelto como cortina de eventos y transmisiones</li>
+            <li class="plus"><span class="plus__t">Suma</span><b>Corte de 60 segundos</b> para redes y para los videos de la red</li>
+            <li class="plus"><span class="plus__t">Suma</span><b>Un guiño de cierre para Natura y otro para Avon</b>, para que cada marca use la canción como propia</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp__k">Y además</p>
+          <ul class="grp__l">
+            <li class="plus"><span class="plus__t">Suma</span><b>Tres</b> rondas de cambios sobre la canción</li>
+            <li>Licencia de uso interno para los tres países y certificado de origen</li>
+            <li><b>El calendario de la temporada ya está contemplado</b>: producimos en tres semanas y adelantamos la base rítmica, sin recargo por el plazo</li>
+          </ul>
+        </div>
+      </article>
     </div>
     <p class="note reveal">Valores en pesos colombianos. La diferencia entre los dos escenarios es de <b>$&thinsp;4.000.000</b> antes de IVA. Sumar o quitar entregables ajusta el total. Cotización válida por 30 días desde su emisión.</p>
     <div class="band reveal">
